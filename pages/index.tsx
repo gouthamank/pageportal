@@ -1,3 +1,5 @@
+import PageContainer from 'components/containers/page';
+import Head from 'next/head';
 import styled from 'styled-components';
 
 interface ContainerProps {
@@ -11,10 +13,15 @@ const SectionContainer = styled.div<ContainerProps>`
 
 export default function RootPage() {
   return (
-    <div>
-      <SectionContainer color={'red'} />
-      <SectionContainer color={'blue'} />
-      <SectionContainer color={'green'} />
-    </div>
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <PageContainer>
+        <SectionContainer color={'#fafafa'} />
+        <SectionContainer color={'#8e8080'} />
+        <SectionContainer color={'#fafafa'} />
+      </PageContainer>
+    </>
   );
 }
