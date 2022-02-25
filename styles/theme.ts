@@ -1,14 +1,22 @@
+import solarizedColors from './solarized';
+
 const light = {
-  content: {
-    backgroundColor: '#fafafa',
-  },
+  colors: solarizedColors.light,
 };
 
 const dark = {
-  content: {
-    backgroundColor: '#646262',
-  },
+  colors: solarizedColors.dark,
 };
 
-export const darkTheme = { ...dark };
-export const lightTheme = { ...light };
+type AppTheme = {
+  colors: {
+    backgroundSoft: string;
+    backgroundHard: string;
+    contentSoft: string;
+    contentHard: string;
+    accents: { [name: string]: string };
+  };
+};
+
+export const darkTheme: AppTheme = { ...dark };
+export const lightTheme: AppTheme = { ...light };

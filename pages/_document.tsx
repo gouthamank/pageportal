@@ -1,10 +1,10 @@
 import Document, {
-  Head,
-  Main,
-  NextScript,
-  Html,
   DocumentContext,
   DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -41,7 +41,22 @@ export default class MyDocument extends Document {
     // noinspection HtmlRequiredTitleElement
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin={'anonymous'}
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Work+Sans:wght@200;400;600&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
