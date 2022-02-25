@@ -1,6 +1,7 @@
-import PageContainer from 'components/containers/page';
+import HomeLayout from 'components/layouts/home';
 import Head from 'next/head';
 import styled from 'styled-components';
+import type { ReactElement } from 'react';
 
 interface ContainerProps {
   color: string;
@@ -17,11 +18,13 @@ export default function RootPage() {
       <Head>
         <title>Home</title>
       </Head>
-      <PageContainer>
-        <SectionContainer color={'#fafafa'} />
-        <SectionContainer color={'#8e8080'} />
-        <SectionContainer color={'#fafafa'} />
-      </PageContainer>
+      <SectionContainer color={'#fafafa'} />
+      <SectionContainer color={'#8e8080'} />
+      <SectionContainer color={'#fafafa'} />
     </>
   );
 }
+
+RootPage.getLayout = function getLayout(page: ReactElement) {
+  return <HomeLayout>{page}</HomeLayout>;
+};

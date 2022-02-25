@@ -1,3 +1,4 @@
+import Header from 'components/Header';
 import styled from 'styled-components';
 import { ReactNode } from 'react';
 
@@ -9,14 +10,10 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const HeaderContainer = styled.div`
-  background-color: blanchedalmond;
-  height: 280px;
-  width: 100%;
-`;
+const HeaderContainer = styled.div``;
 
 const ContentWrapper = styled.div`
-  background-color: lightgray;
+  background-color: ${({ theme }) => theme.content.backgroundColor};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -43,7 +40,9 @@ interface PageProps {
 const PageContainer = (props: PageProps) => {
   return (
     <Container>
-      <HeaderContainer />
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
       <ContentWrapper>
         <ContentContainer>{props.children}</ContentContainer>
       </ContentWrapper>
