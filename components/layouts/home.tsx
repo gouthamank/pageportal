@@ -53,7 +53,7 @@ interface PageProps {
 const PageContainer = (props: PageProps) => {
   const [isTop, setIsTop] = useState(true);
   const checkScroll = () => {
-    setIsTop(window.scrollY <= 10);
+    setIsTop(window.scrollY <= 50);
   };
 
   useEffect(() => {

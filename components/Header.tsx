@@ -11,7 +11,7 @@ const Container = styled.header<HeaderProps>`
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  height: 125px;
+  height: ${(props) => (props.isSticky ? '80px' : '125px')};
   transition: box-shadow 0.3s, background-color 0.3s, height 0.3s;
   background-color: ${(props) =>
     props.isSticky
@@ -19,7 +19,7 @@ const Container = styled.header<HeaderProps>`
       : props.theme.colors.backgroundSoft};
   box-shadow: ${(props) =>
     props.isSticky ? '0 2px 22px rgba(0, 0, 0, 0.25)' : 'none'};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(147, 161, 161, 0.25);
 `;
 
 const HeroText = styled.span`
@@ -33,7 +33,7 @@ const Header = (props: HeaderProps) => {
 
   return (
     <Container isSticky={props.isSticky}>
-      <HeroText>Gouthaman Kumar</HeroText>
+      <HeroText>~~~ ~~~~</HeroText>
       <button onClick={darkMode.toggle}>TOGGLE</button>
     </Container>
   );
