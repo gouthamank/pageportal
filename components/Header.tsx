@@ -32,6 +32,7 @@ const HeroImageButton = styled.button`
   background: none;
   outline: none;
   color: ${(props) => props.theme.colors.contentSoft};
+  transition: color 0.3s;
   border: none;
   cursor: pointer;
 `;
