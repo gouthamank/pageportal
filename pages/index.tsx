@@ -57,8 +57,7 @@ export default function RootPage() {
             <br />
             <br />
             I'm a full stack developer with a passion for creating beautiful
-            user experiences. I now live in Toronto, but am originally from
-            Dubai.
+            user experiences. I live in Toronto, but am originally from Dubai.
             <br />
             <br />I have professional experience with <b>React</b> and{' '}
             <b>Next.JS</b>, and <b>Node.JS / Express</b> backends, and have
