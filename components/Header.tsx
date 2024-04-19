@@ -33,6 +33,7 @@ const HeroImageButton = styled.button`
   outline: none;
   color: ${(props) => props.theme.colors.contentSoft};
   border: none;
+  cursor: pointer;
 `;
 
 const Header = (props: HeaderProps) => {
