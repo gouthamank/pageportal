@@ -28,13 +28,22 @@ const HeroText = styled.span`
   font-weight: 700;
 `;
 
+const HeroImageButton = styled.button`
+  background: none;
+  outline: none;
+  color: ${(props) => props.theme.colors.contentSoft};
+  border: none;
+`;
+
 const Header = (props: HeaderProps) => {
   const darkMode = useDarkMode();
 
   return (
     <Container isSticky={props.isSticky}>
-      <HeroText>~~~ ~~~~</HeroText>
-      <button onClick={darkMode.toggle}>TOGGLE</button>
+      <HeroText />
+      <HeroImageButton onClick={darkMode.toggle}>
+        <span className="material-symbols-outlined">contrast</span>
+      </HeroImageButton>
     </Container>
   );
 };
