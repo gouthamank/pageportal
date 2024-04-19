@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${(props) => props.theme.colors.backgroundSoft};
+  transition: background-color 0.3s;
 `;
 
 const HeaderContainer = styled.div`

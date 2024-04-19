@@ -8,8 +8,9 @@ interface ContainerProps {
 }
 
 const SectionContainer = styled.div<ContainerProps>`
-  min-height: 100vh;
   background-color: ${(props) => props.color};
+  min-height: calc(100vh - 125px - 100px - 50px);
+  transition: background-color 0.3s;
   margin-bottom: 50px;
   position: relative;
   display: flex;
@@ -26,6 +27,7 @@ const SampleTextLeft = styled.span`
 
 const TextParagraph = styled.p`
   max-width: 900px;
+  transition: color 0.3s;
 `;
 
 const TextLink = styled.a`
@@ -34,6 +36,11 @@ const TextLink = styled.a`
 
 const TextLinkAlternate = styled.a`
   color: ${(props) => props.theme.colors.accents.yellow};
+`;
+
+const HorizontalRule = styled.hr`
+  border-top: none;
+  border-bottom: 1px solid rgba(147, 161, 161, 0.25);
 `;
 
 export default function RootPage() {
@@ -54,15 +61,18 @@ export default function RootPage() {
             Dubai.
             <br />
             <br />I have professional experience with <b>React</b> and{' '}
-            <b>Next.JS</b>, and <b>Node.JS / Express</b> backends. I also dabble
-            in mobile development, having built and published Android and iOS
-            apps natively and with <b>React Native</b>.
+            <b>Next.JS</b>, and <b>Node.JS / Express</b> backends, and have
+            helped build apps big and small, in teams and individually.
+            <br />I also dabble in mobile development, having built and
+            published Android and iOS apps natively and with <b>React Native</b>
+            .
             <br />
             <br />
+            <HorizontalRule />
             Feel free to reach out to me at{' '}
             <b>mail &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
             <TextLink
-              href="https://drive.google.com/file/d/19-J9ltKpzhQYPcxozuMWoSaQASyDXs0X/view?usp=sharing"
+              href="https://drive.google.com/file/d/19-J9ltKpzhQYPcxozuMWoSaQASyDXs0X/view"
               target="_blank"
             >
               <b>résumé</b>
