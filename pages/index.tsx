@@ -1,47 +1,15 @@
-import HomeLayout from 'components/layouts/home';
+import HomeLayout from 'ui/layouts/home';
 import Head from 'next/head';
-import styled, { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components';
+import {
+  HorizontalRule,
+  SampleTextLeft,
+  SectionContainer,
+  TextLink,
+  TextLinkAlternate,
+  TextParagraph,
+} from './ui';
 import type { ReactElement } from 'react';
-
-interface ContainerProps {
-  color: string;
-}
-
-const SectionContainer = styled.div<ContainerProps>`
-  background-color: ${(props) => props.color};
-  min-height: calc(100vh - 125px - 100px - 50px);
-  transition: background-color 0.3s;
-  margin-bottom: 50px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const SampleTextLeft = styled.span`
-  font-family: 'Noto Serif', serif;
-  font-size: 24px;
-  color: ${(props) => props.theme.colors.contentHard};
-  letter-spacing: -1px;
-`;
-
-const TextParagraph = styled.p`
-  max-width: 900px;
-  transition: color 0.3s;
-`;
-
-const TextLink = styled.a`
-  color: ${(props) => props.theme.colors.accents.violet};
-`;
-
-const TextLinkAlternate = styled.a`
-  color: ${(props) => props.theme.colors.accents.yellow};
-`;
-
-const HorizontalRule = styled.hr`
-  border-top: none;
-  border-bottom: 1px solid rgba(147, 161, 161, 0.25);
-`;
 
 export default function RootPage() {
   const theme = useTheme();
