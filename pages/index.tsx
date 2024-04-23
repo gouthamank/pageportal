@@ -8,7 +8,7 @@ import {
   TextLink,
   TextLinkAlternate,
   TextParagraph,
-} from './ui';
+} from '../ui/pageComponents/home';
 import type { ReactElement } from 'react';
 
 export default function RootPage() {
