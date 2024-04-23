@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const [isMounted, setIsMounted] = useState(false);
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
   const theme: DefaultTheme = darkMode.value ? darkTheme : lightTheme;
 
   useEffect(() => {

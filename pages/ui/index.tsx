@@ -6,7 +6,7 @@ interface ContainerProps {
 
 export const SectionContainer = styled.div<ContainerProps>`
   background-color: ${(props) => props.color};
-  min-height: calc(100vh - 125px - 100px - 50px);
+  min-height: calc(100vh - 12.5rem - 10rem - 5rem);
   transition: background-color 0.3s;
   margin-bottom: 5rem;
   position: relative;
