@@ -10,14 +10,12 @@ const grabbd: ProjectProps = {
         },
     ],
     description: (
-        <ul className='list-inside list-disc'>
-            <li>Showcase website built for a startup focused on capturing user lists and favourite establishments.</li>
-            <li>
-                Built independently and entirely from scratch, including the UI design library and CMS setup /
-                configuration.
-            </li>
-            <li>Worked closely with client undergoing rapid iterations of the design and UX</li>
-        </ul>
+        <span>
+            Showcase website built for a startup focused on capturing user lists and favourite establishments. While the
+            startup is now sadly defunct, I&apos;ve anonymised and self-hosted their showcase page (with permission, of
+            course). Built independently and entirely from scratch, including the UI design library, CMS setup and
+            configuration.
+        </span>
     ),
 };
 

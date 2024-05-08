@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <main className='container mx-auto flex min-h-screen flex-col px-4 py-[calc(5rem)] md:px-6'>
                 <Hero />
-                <hr className='my-4' />
+                <hr className='mt-4' />
                 <SelectedProjects />
                 <hr className='mb-4 mt-6' />
                 <Footer />
