@@ -3,8 +3,8 @@ import className from 'classnames';
 import { Chivo, Roboto_Mono } from 'next/font/google';
 // import grabbdImage from './images/grabbd.png';
 import type { ProjectProps } from '@/types/components/Project/index.types';
-import ImageLink from './components/ImageLink';
-import TagContainer from './components/Tag';
+import ImageLink from '../../ui/ImageLink';
+import TagContainer from '../../ui/Tag';
 
 const arvo = Chivo({ subsets: ['latin'], weight: '400' });
 const robotoMono = Roboto_Mono({ subsets: ['latin'] });
@@ -12,9 +12,7 @@ const robotoMono = Roboto_Mono({ subsets: ['latin'] });
 export default function Project(props: ProjectProps) {
     return (
         <div
-            data-flip-id={props.index}
             className={className([
-                'project',
                 'flex flex-row',
                 'rounded-lg border shadow-lg transition-all duration-200',
                 'border-gray-400 bg-solarized-base3',
@@ -22,7 +20,7 @@ export default function Project(props: ProjectProps) {
             ])}
         >
             <div className='w-full p-4'>
-                <div className='flex flex-row items-center justify-between'>
+                <div className='flex flex-row items-center gap-2'>
                     <div className={arvo.className}>{props.title}</div>
                     <div className='flex flex-row items-center gap-2'>
                         {props.links.map((link, idx) => (
@@ -33,7 +31,7 @@ export default function Project(props: ProjectProps) {
                 <div className='mt-1'>
                     <TagContainer tags={props.tags} />
                 </div>
-                <p className='mt-2 text-sm leading-snug'>{props.description}</p>
+                <div className='mt-2 text-sm leading-snug'>{props.description}</div>
             </div>
             {/*<div className='relative w-[70%] overflow-clip rounded-r-lg'>*/}
             {/*    <Image src={grabbdImage} alt={props.title} fill objectFit='cover' />*/}

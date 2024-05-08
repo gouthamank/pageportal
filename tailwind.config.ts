@@ -21,7 +21,7 @@ const config: Config = {
                 'solarized-base2': '#eee8d5',
                 'solarized-base0': '#839496',
                 'solarized-base1': '#93a1a1',
-                'solarized-d-base00': '#657b83',
+                'solarized-d-base00': '#7e8f95',
                 'solarized-d-base01': '#586e75',
                 'solarized-yellow': '#b58900',
                 'solarized-orange': '#cb4b16',

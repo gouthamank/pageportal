@@ -1,5 +1,4 @@
 export type ProjectProps = {
-    index: number;
     title: string;
     tags: string[];
     links: ProjectLink[];
@@ -7,7 +6,7 @@ export type ProjectProps = {
 };
 
 export type ProjectLink = {
-    iconName: string;
+    iconName: 'website' | 'code';
     link: string;
     title?: string;
 };

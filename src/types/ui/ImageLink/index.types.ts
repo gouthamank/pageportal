@@ -1,5 +1,5 @@
 export type ImageLinkProps = {
-    iconName: string;
+    iconName: 'website' | 'code';
     link: string;
     title?: string;
 };

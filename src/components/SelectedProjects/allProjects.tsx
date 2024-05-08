@@ -5,15 +5,19 @@ const grabbd: ProjectProps = {
     tags: ['TypeScript', 'Next.JS', 'Strapi'],
     links: [
         {
-            iconName: 'public',
+            iconName: 'website',
             link: 'https://grabbd.gouthaman.dev',
         },
     ],
     description: (
-        <span>
-            Showcase website built for a startup focused on capturing user lists and favourite establishments. Built
-            independently and entirely from scratch, including the design library and CMS configuration.
-        </span>
+        <ul className='list-inside list-disc'>
+            <li>Showcase website built for a startup focused on capturing user lists and favourite establishments.</li>
+            <li>
+                Built independently and entirely from scratch, including the UI design library and CMS setup /
+                configuration.
+            </li>
+            <li>Worked closely with client undergoing rapid iterations of the design and UX</li>
+        </ul>
     ),
 };
 
@@ -22,7 +26,7 @@ const tamm: ProjectProps = {
     tags: ['TypeScript', 'React', 'Node.JS', 'Express', 'MariaDB', 'Redis'],
     links: [
         {
-            iconName: 'public',
+            iconName: 'website',
             link: 'https://tamm.abudhabi',
         },
     ],
@@ -52,12 +56,13 @@ const sorted: ProjectProps = {
     tags: ['TypeScript', 'Next.JS', 'Tailwind'],
     links: [
         {
-            iconName: 'public',
+            iconName: 'website',
             link: 'https://sorted.gouthaman.dev',
         },
         {
             iconName: 'code',
             link: 'https://sorted.gouthaman.dev',
+            title: 'GitHub',
         },
     ],
     description: (
@@ -72,7 +77,7 @@ const visitSaudi: ProjectProps = {
     tags: ['TypeScript', 'Next.JS', 'Strapi'],
     links: [
         {
-            iconName: 'public',
+            iconName: 'website',
             link: 'https://map.visitsaudi.com/en',
         },
     ],
@@ -110,8 +115,15 @@ const irascible: ProjectProps = {
     description: <span>A simple, easy-to-use Android IRC chat client.</span>,
 };
 
+const aecb: ProjectProps = {
+    title: 'Al Etihad Credit Bureau',
+    tags: ['React Native', 'Android', 'iOS'],
+    links: [],
+    description: <span></span>,
+};
+
 const webProjects = [grabbd, tamm, tammWorkbench, visitSaudi, sorted];
-const mobileProjects = [respite, irascible];
+const mobileProjects = [aecb, respite, irascible];
 const allProjects = [...webProjects, ...mobileProjects];
 
 export { webProjects, mobileProjects };

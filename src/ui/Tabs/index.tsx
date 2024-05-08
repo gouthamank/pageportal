@@ -9,12 +9,21 @@ const robotoMono = Roboto_Mono({ subsets: ['latin'] });
 export default function Tabs(props: TabsProps) {
     const [selectedTab, setSelectedTab] = useState(props.tabs[0]);
 
+    const onTabSelected = (tab: string) => () => {
+        if (selectedTab === tab) {
+            return;
+        }
+
+        props.onChangeTab(tab);
+        setSelectedTab(tab);
+    };
+
     return (
-        <div className='flex w-fit flex-row rounded-[15px] border border-early-dawn-800 bg-early-dawn-100 text-xs text-early-dawn-500'>
+        <div className='flex w-full flex-row rounded-[15px] border border-early-dawn-800 bg-early-dawn-100 text-xs text-early-dawn-500 md:w-fit dark:bg-early-dawn-950 dark:text-early-dawn-700'>
             {props.tabs.map((tab, idx) => (
-                <span
+                <button
                     className={className([
-                        'cursor-pointer select-none overflow-clip px-4 py-2 transition-all duration-200 hover:text-white',
+                        'flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-all duration-200 hover:text-white',
                         {
                             'bg-early-dawn-700 text-white': selectedTab === tab,
                         },
@@ -30,17 +39,10 @@ export default function Tabs(props: TabsProps) {
                         robotoMono.className,
                     ])}
                     key={idx}
-                    onClick={() => {
-                        if (selectedTab === tab) {
-                            return;
-                        }
-
-                        props.onChangeTab(tab);
-                        setSelectedTab(tab);
-                    }}
+                    onClick={onTabSelected(tab)}
                 >
                     {tab}
-                </span>
+                </button>
             ))}
         </div>
     );
