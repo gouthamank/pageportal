@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Gentium_Book_Plus } from 'next/font/google';
 import './globals.css';
 
-const gentiumBookPlus = Gentium_Book_Plus({ subsets: ['latin'], weight: '400' });
+const gentiumBookPlus = Gentium_Book_Plus({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
     title: 'Hello!',

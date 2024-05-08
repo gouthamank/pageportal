@@ -3,7 +3,7 @@ import type { HeroProps } from '@/types/components/Hero/index.types';
 export default function Hero(props: HeroProps) {
     return (
         <div>
-            <p className='text-base'>Hi, I&apos;m Gouthaman.</p>
+            <p>Hi, I&apos;m Gouthaman.</p>
             <p className='mt-4'>
                 I&apos;m a full stack developer with a passion for creating beautiful user experiences. I live in
                 Toronto, but am originally from Dubai.

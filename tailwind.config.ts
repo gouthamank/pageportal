@@ -5,6 +5,7 @@ const config: Config = {
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/ui/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         screens: {
@@ -30,9 +31,23 @@ const config: Config = {
                 'solarized-blue': '#268bd2',
                 'solarized-cyan': '#2aa198',
                 'solarized-green': '#859900',
+                'early-dawn': {
+                    '50': '#fdf6e3',
+                    '100': '#faeecb',
+                    '200': '#f5da92',
+                    '300': '#f0c359',
+                    '400': '#edac32',
+                    '500': '#e58c1b',
+                    '600': '#cb6914',
+                    '700': '#a94b14',
+                    '800': '#893a17',
+                    '900': '#713116',
+                    '950': '#411707',
+                },
             },
             fontSize: {
-                sm: '0.8rem',
+                xs: '0.7rem',
+                sm: '0.85rem',
                 base: '1rem',
                 md: '1.25rem',
                 lg: '1.25rem',
