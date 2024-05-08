@@ -43,12 +43,12 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
                 className={className([
                     'sticky top-[0.5rem] flex flex-col gap-2 rounded-lg pb-4 pt-4 md:flex-row md:justify-between md:gap-0',
                     {
-                        'border border-gray-400 px-2 shadow-lg backdrop-blur-2xl dark:border-gray-900':
+                        'border border-gray-400 px-4 shadow-lg backdrop-blur-2xl dark:border-gray-900':
                             isProjectHeaderSticky,
                     },
                 ])}
                 style={{
-                    transition: 'padding 0.2s',
+                    transition: 'padding 0.2s, box-shadow 0.2s',
                 }}
             >
                 <p className={className([chivo.className, 'text-md uppercase text-solarized-orange'])}>
@@ -56,9 +56,7 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
                 </p>
                 <Tabs tabs={['Web', 'Mobile']} onChangeTab={handleTabChange} />
             </div>
-            <p className='mb-4 mt-2'>
-                Here&apos;s some of the interesting projects I&apos;ve worked on over the years.
-            </p>
+            <p className='mb-4 mt-2'>Here are some of the interesting projects I&apos;ve worked on over the years.</p>
             {projectSelection === 'Web' && (
                 <div className='project mt-4 flex flex-col gap-4'>
                     {webProjects.map((project: ProjectProps, idx: number) => (

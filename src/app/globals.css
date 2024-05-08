@@ -5,20 +5,20 @@
 :root {
     --foreground-rgb: theme('colors.solarized-base0');
     --background-start-rgb: theme('colors.solarized-base2');
-    --background-end-rgb: theme('colors.solarized-base2');
+    --background-end-rgb: theme('colors.solarized-base3');
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: theme('colors.solarized-d-base00');
         --background-start-rgb: theme('colors.solarized-d-base02');
-        --background-end-rgb: theme('colors.solarized-d-base02');
+        --background-end-rgb: theme('colors.solarized-d-base03');
     }
 }
 
 body {
     color: var(--foreground-rgb);
-    background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
+    background-color: var(--background-start-rgb);
     transition:
         background-color 200ms,
         color 200ms;

@@ -2,7 +2,7 @@ import type { ProjectProps } from '@/types/components/Project/index.types';
 
 const grabbd: ProjectProps = {
     title: 'Grabbd',
-    tags: ['TypeScript', 'Next.JS', 'Strapi'],
+    tags: ['TypeScript', 'Next.JS', 'Strapi', 'GSAP', 'Lottie'],
     links: [
         {
             iconName: 'website',
@@ -29,23 +29,36 @@ const tamm: ProjectProps = {
         },
     ],
     description: (
-        <span>
-            Public-facing government service portal built with a microservice oriented pattern. Built and refined 30+
-            digital government services for use by UAE nationals and residents. (100,000+ daily hits)
-        </span>
+        <>
+            <p>
+                Public-facing government service portal built with a microservice-oriented backend. Developed and
+                refined 30+ critical digital government services for use by UAE nationals and residents. This was a very
+                large scale project which involved onboarding APIs from around 40 different government entities.
+            </p>
+            <p className='mt-1'>
+                These services include authentication, payment gateway integration, draft support, analytics and tight
+                integration with various other microservices. 100,000+ daily hits.
+            </p>
+        </>
     ),
 };
 
 const tammWorkbench: ProjectProps = {
     title: 'TAMM - Workbench',
-    tags: ['TypeScript', 'React', 'Node.JS', 'Express', 'MongoDB'],
+    tags: ['TypeScript', 'React', 'Node.JS', 'Express', 'MongoDB', 'GraphQL'],
     links: [],
     description: (
-        <span>
-            In-house development tool used at TAMM. Pseudo low-code environment for service developers to quickly
-            develop custom flows and services, with custom previews and easy deployment strategies. Also developed a
-            unified rendering engine to ensure consistent UX across various deployments
-        </span>
+        <>
+            <p>
+                In-house development tool used at TAMM. Introduced in an effort to promote consistent UX - such as
+                spacing, error messages and handling, design library versions - across ~700 services.
+            </p>
+            <p className='mt-1'>
+                Two-part implementation where the first part was a pseudo low-code environment for service developers to
+                quickly develop custom flows and services, with custom previews and easy deployment strategies. The
+                second part was the rendering engine to parse and display the Workbench-ready deployed services.
+            </p>
+        </>
     ),
 };
 
@@ -59,20 +72,22 @@ const sorted: ProjectProps = {
         },
         {
             iconName: 'code',
-            link: 'https://sorted.gouthaman.dev',
+            link: 'https://github.com/gouthamank/sorted',
             title: 'GitHub',
         },
     ],
     description: (
         <span>
             A sorting visualiser I built for fun to contrast the differences between a few popular sorting algorithms.
+            While the algorithms themselves are straightforward, the draw was to animate each individual step and
+            highlight the correct indices over multiple levels of recursion.
         </span>
     ),
 };
 
 const visitSaudi: ProjectProps = {
     title: 'Visit Saudi - Map',
-    tags: ['TypeScript', 'Next.JS', 'Strapi'],
+    tags: ['TypeScript', 'Next.JS', 'Strapi', 'Google Maps SDK', 'Google Places API'],
     links: [
         {
             iconName: 'website',
@@ -81,8 +96,9 @@ const visitSaudi: ProjectProps = {
     ],
     description: (
         <span>
-            Tourist informational website utilizing heavy integration with Google Maps SDK and Google Places API
-            (10,000+ daily hits)
+            Tourist informational website built for the Saudi Tourism Authority. Interactive map which displays
+            recommended cultural events across the country, with photos, links and navigation support. Highly dynamic
+            and configurable via the CMS. 10,000+ daily hits.
         </span>
     ),
 };
@@ -116,8 +132,18 @@ const irascible: ProjectProps = {
 const aecb: ProjectProps = {
     title: 'Al Etihad Credit Bureau',
     tags: ['React Native', 'Android', 'iOS'],
-    links: [],
-    description: <span></span>,
+    links: [
+        {
+            iconName: 'website',
+            link: 'https://etihadbureau.ae/',
+        },
+    ],
+    description: (
+        <span>
+            React Native app built for Android and iOS. The apps are now the standardised method for UAE nationals and
+            residents to obtain a credit report.
+        </span>
+    ),
 };
 
 const webProjects = [grabbd, tamm, tammWorkbench, visitSaudi, sorted];

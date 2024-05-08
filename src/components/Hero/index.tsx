@@ -5,8 +5,8 @@ export default function Hero(props: HeroProps) {
         <div>
             <p>Hi, I&apos;m Gouthaman.</p>
             <p className='mt-4'>
-                I&apos;m a full stack developer with a passion for creating beautiful user experiences. I live in
-                Toronto, but am originally from Dubai.
+                I&apos;m a full stack developer with a passion for creating beautiful user experiences. I am currently
+                based in Toronto, but am originally from Dubai.
             </p>
             <p className='mt-4'>
                 I have professional experience with <b>React</b> and <b>Next.JS</b>, and <b>Node.JS / Express</b>{' '}
