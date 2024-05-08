@@ -24,20 +24,20 @@ export default function LinkButton(props: LinkButtonProps) {
     if (props.iconName === 'code') {
         return (
             <a href={props.link} target='_blank' title={props.title || 'GitHub'}>
-                <div className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
+                <span className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
                     <span className={className([robotoMono.className, 'text-xs'])}>GitHub</span>
                     {codeSvg('fill-solarized-cyan transition-opacity h-4 w-4')}
-                </div>
+                </span>
             </a>
         );
     }
     if (props.iconName === 'website') {
         return (
             <a href={props.link} target='_blank' title={props.title || 'Website'}>
-                <div className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
+                <span className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
                     <span className={className([robotoMono.className, 'text-xs'])}>{props.title || 'Website'}</span>
                     {webSvg('fill-solarized-cyan transition-opacity h-4 w-4')}
-                </div>
+                </span>
             </a>
         );
     }

@@ -1,5 +1,3 @@
-'use client';
-
 import Hero from '@/components/Hero';
 import SelectedProjects from '@/components/SelectedProjects';
 import Footer from '@/components/Footer';

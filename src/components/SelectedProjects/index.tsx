@@ -1,3 +1,5 @@
+'use client';
+
 import className from 'classnames';
 import { Chivo } from 'next/font/google';
 import Project from '@/components/Project';
