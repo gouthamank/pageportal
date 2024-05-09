@@ -12,6 +12,7 @@ const chivo = Chivo({ subsets: ['latin'] });
 export default function Hero(props: HeroProps) {
     return (
         <section
+            aria-label='Hero Section'
             className={className([
                 chivo.className,
                 'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
@@ -22,8 +23,8 @@ export default function Hero(props: HeroProps) {
                 <ThemeSwitch />
             </div>
             <div>
-                <p>Hi, I&apos;m</p>
-                <p className='text-xl'>Gouthaman Kumarappan.</p>
+                <h3>Hi, I&apos;m</h3>
+                <h1 className='text-xl'>Gouthaman Kumarappan.</h1>
             </div>
             <div className='relative mt-4 h-[10rem] w-[10rem] overflow-clip rounded-[100%] border-2 border-slate-800 transition-all hover:border-0 dark:border-slate-300'>
                 <Image

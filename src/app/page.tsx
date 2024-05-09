@@ -15,9 +15,10 @@ export default function Home() {
     }, []);
 
     return (
-        <main>
+        <main aria-label='Main Page'>
             <Hero />
             <div
+                aria-label='Page Content'
                 id='pageContent'
                 className='relative z-50 border-b-2 border-t-2 border-slate-800 bg-solarized-base2 dark:border-slate-300 dark:bg-solarized-d-base02'
             >

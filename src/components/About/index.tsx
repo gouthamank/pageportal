@@ -5,8 +5,8 @@ const chivo = Chivo({ subsets: ['latin'] });
 
 export default function About() {
     return (
-        <section>
-            <p className={className([chivo.className, 'mt-8 text-md uppercase text-solarized-orange'])}>About</p>
+        <section aria-label='About'>
+            <h2 className={className([chivo.className, 'mt-8 text-md uppercase text-solarized-orange'])}>About</h2>
             <p className='mt-4'>
                 I&apos;m a full stack developer with a passion for creating beautiful user experiences. I am currently
                 based in Toronto, but I&apos;m originally from Dubai.

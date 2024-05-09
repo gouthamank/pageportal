@@ -22,7 +22,9 @@ export default function Tabs(props: TabsProps) {
         <div className='flex w-full flex-row rounded-[15px] border border-early-dawn-800 bg-early-dawn-100 text-xs text-early-dawn-500 md:w-fit dark:bg-early-dawn-950 dark:text-early-dawn-700'>
             {props.tabs.map((tab, idx) => (
                 <button
+                    role={'option'}
                     aria-label={`View ${tab} projects`}
+                    aria-selected={tab === selectedTab}
                     className={className([
                         'flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-all duration-200 hover:text-white',
                         {

@@ -39,7 +39,7 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
     }, []);
 
     return (
-        <section className='mb-14'>
+        <section className='mb-14' aria-label='Selected Projects'>
             <div
                 id='project-header'
                 className={className([
@@ -53,9 +53,9 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
                     transition: 'padding 0.2s, box-shadow 0.2s',
                 }}
             >
-                <p className={className([chivo.className, 'text-md uppercase text-solarized-orange'])}>
+                <h2 className={className([chivo.className, 'text-md uppercase text-solarized-orange'])}>
                     Selected Projects
-                </p>
+                </h2>
                 <Tabs tabs={['Web', 'Mobile']} onChangeTab={handleTabChange} />
             </div>
             <p className='mb-4'>Here are some of the interesting projects I&apos;ve worked on over the years.</p>

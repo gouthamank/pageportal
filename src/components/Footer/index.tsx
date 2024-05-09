@@ -29,6 +29,7 @@ export default function Footer(props: FooterProps) {
     }, []);
     return (
         <footer
+            aria-label={'Footer Section'}
             id='footer'
             className={className([
                 chivo.className,
