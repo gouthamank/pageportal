@@ -39,7 +39,7 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
     }, []);
 
     return (
-        <div>
+        <div className='mb-14'>
             <div
                 id='project-header'
                 className={className([

@@ -5,15 +5,16 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
-        <>
-            <main className='container mx-auto flex min-h-screen flex-col px-4 py-[calc(5rem)] md:px-6'>
-                <Hero />
-                <About />
-                <hr className='mt-4' />
-                <SelectedProjects />
-                <hr className='mb-4 mt-6' />
-                <Footer />
-            </main>
-        </>
+        <main>
+            <Hero />
+            <div className='relative z-50 bg-solarized-base2 dark:bg-solarized-d-base02'>
+                <div className='container mx-auto flex min-h-screen flex-col px-4 md:px-6'>
+                    <About />
+                    <hr className='mt-12' />
+                    <SelectedProjects />
+                </div>
+            </div>
+            <Footer />
+        </main>
     );
 }
