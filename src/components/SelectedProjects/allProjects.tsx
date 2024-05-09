@@ -11,10 +11,8 @@ const grabbd: ProjectProps = {
     ],
     description: (
         <span>
-            Showcase website built for a startup focused on capturing user lists and favourite establishments. While the
-            startup is now sadly defunct, I&apos;ve anonymised and self-hosted their showcase page (with permission, of
-            course). Built independently and entirely from scratch, including the UI design library, CMS setup and
-            configuration.
+            Showcase website built for a startup focused on capturing user lists and favourite establishments. Built
+            independently and entirely from scratch, including the UI design library, CMS setup and configuration.
         </span>
     ),
 };
