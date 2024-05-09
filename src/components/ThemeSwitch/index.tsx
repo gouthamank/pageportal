@@ -75,7 +75,7 @@ export default function ThemeSwitch() {
                     right: 0,
                     width: '2rem',
                     height: '2rem',
-                    transition: 'transform 300ms',
+                    transition: 'transform 300ms ease-out',
                 }}
             >
                 {lightModeSvg('fill-early-dawn-400')}
@@ -91,7 +91,7 @@ export default function ThemeSwitch() {
                     right: 0,
                     width: '2rem',
                     height: '2rem',
-                    transition: 'transform 300ms',
+                    transition: 'transform 300ms ease-out',
                 }}
             >
                 {darkModeSvg('fill-early-dawn-800')}
