@@ -25,14 +25,14 @@ export default function Hero(props: HeroProps) {
                 <p>Hi, I&apos;m</p>
                 <p className='text-xl'>Gouthaman Kumarappan.</p>
             </div>
-            <div className='relative mt-4 h-[10rem] w-[10rem] overflow-clip rounded-[100%] border-2 border-slate-800 transition-transform dark:border-slate-300'>
+            <div className='relative mt-4 h-[10rem] w-[10rem] overflow-clip rounded-[100%] border-2 border-slate-800 transition-all hover:border-0 dark:border-slate-300'>
                 <Image
                     placeholder='blur'
                     src={profileImage}
                     alt={'Gouthaman'}
                     fill
                     objectFit={'cover'}
-                    className='scale-125 transition-all hover:scale-150'
+                    className='profile-zoom-on-hover'
                 />
             </div>
         </div>

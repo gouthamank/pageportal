@@ -60,3 +60,12 @@ body {
 #project-header {
     -webkit-backdrop-filter: blur(8px) !important;
 }
+
+.profile-zoom-on-hover {
+    transition: transform 200ms;
+    transform: scale(1.25);
+}
+
+.profile-zoom-on-hover:hover {
+    transform: scale(1.3);
+}
