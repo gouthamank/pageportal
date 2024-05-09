@@ -43,6 +43,7 @@ export default function Footer(props: FooterProps) {
                         href='https://drive.google.com/file/d/19-J9ltKpzhQYPcxozuMWoSaQASyDXs0X/view'
                         className='text-early-dawn-800 hover:opacity-80 dark:text-early-dawn-400'
                         target='_blank'
+                        tabIndex={-1}
                     >
                         <b>résumé</b>
                     </a>

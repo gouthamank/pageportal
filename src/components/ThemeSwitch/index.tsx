@@ -64,6 +64,7 @@ export default function ThemeSwitch() {
             aria-label='Toggle theme'
             className={className(['relative overflow-clip transition-opacity hover:opacity-80'])}
             onClick={handleClick}
+            tabIndex={-1}
         >
             <div
                 id='lightSwitch'

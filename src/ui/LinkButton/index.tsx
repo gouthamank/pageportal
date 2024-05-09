@@ -23,7 +23,7 @@ const codeSvg = (className: string) => (
 export default function LinkButton(props: LinkButtonProps) {
     if (props.iconName === 'code') {
         return (
-            <a href={props.link} target='_blank' title={props.title || 'GitHub'}>
+            <a href={props.link} target='_blank' title={props.title || 'GitHub'} tabIndex={props.isFooterLink ? -1 : 0}>
                 <span
                     aria-hidden='true'
                     className={className([
@@ -54,7 +54,12 @@ export default function LinkButton(props: LinkButtonProps) {
     }
     if (props.iconName === 'website') {
         return (
-            <a href={props.link} target='_blank' title={props.title || 'Website'}>
+            <a
+                href={props.link}
+                target='_blank'
+                title={props.title || 'Website'}
+                tabIndex={props.isFooterLink ? -1 : 0}
+            >
                 <span
                     className={className([
                         'flex flex-row items-center gap-1 hover:opacity-80',
