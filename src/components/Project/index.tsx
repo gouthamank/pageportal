@@ -8,7 +8,7 @@ const arvo = Chivo({ subsets: ['latin'], weight: '400' });
 
 export default function Project(props: ProjectProps) {
     return (
-        <div
+        <article
             className={className([
                 'flex flex-row',
                 'rounded-lg border shadow-lg transition-all duration-200',
@@ -30,6 +30,6 @@ export default function Project(props: ProjectProps) {
                 </div>
                 <div className='mt-2 text-sm leading-snug'>{props.description}</div>
             </div>
-        </div>
+        </article>
     );
 }

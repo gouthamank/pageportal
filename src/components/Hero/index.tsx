@@ -11,7 +11,7 @@ const chivo = Chivo({ subsets: ['latin'] });
 
 export default function Hero(props: HeroProps) {
     return (
-        <div
+        <section
             className={className([
                 chivo.className,
                 'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
@@ -35,6 +35,6 @@ export default function Hero(props: HeroProps) {
                     className='profile-zoom-on-hover'
                 />
             </div>
-        </div>
+        </section>
     );
 }

@@ -61,6 +61,7 @@ export default function ThemeSwitch() {
 
     return (
         <button
+            aria-label='Toggle theme'
             className={className(['relative overflow-clip transition-opacity hover:opacity-80'])}
             onClick={handleClick}
         >

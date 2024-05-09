@@ -5,7 +5,7 @@ const chivo = Chivo({ subsets: ['latin'] });
 
 export default function About() {
     return (
-        <>
+        <section>
             <p className={className([chivo.className, 'mt-8 text-md uppercase text-solarized-orange'])}>About</p>
             <p className='mt-4'>
                 I&apos;m a full stack developer with a passion for creating beautiful user experiences. I am currently
@@ -17,6 +17,6 @@ export default function About() {
                 mobile development experience, having created and released Android and iOS apps using both native
                 technologies and React Native.
             </p>
-        </>
+        </section>
     );
 }

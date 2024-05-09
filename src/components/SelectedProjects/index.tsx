@@ -39,7 +39,7 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
     }, []);
 
     return (
-        <div className='mb-14'>
+        <section className='mb-14'>
             <div
                 id='project-header'
                 className={className([
@@ -73,6 +73,6 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
                     ))}
                 </div>
             )}
-        </div>
+        </section>
     );
 }

@@ -6,7 +6,7 @@ const gentiumBookPlus = Gentium_Book_Plus({ subsets: ['latin'], weight: ['400', 
 
 export const metadata: Metadata = {
     title: 'Hello!',
-    description: '',
+    description: 'Portfolio for Gouthaman Kumarappan',
 };
 
 export default function RootLayout({
