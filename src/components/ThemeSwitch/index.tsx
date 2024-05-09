@@ -13,7 +13,8 @@ const darkModeSvg = (className: string) => (
 );
 
 export default function ThemeSwitch() {
-    const isSystemDarkMode = window ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
+    const isSystemDarkMode =
+        typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
     const [currentTheme, setTheme] = useState(isSystemDarkMode ? 'dark' : 'light');
 
     const handleClick = () => {
