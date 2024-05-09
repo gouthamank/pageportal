@@ -13,7 +13,7 @@ const darkModeSvg = (className: string) => (
 );
 
 export default function ThemeSwitch() {
-    const isSystemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isSystemDarkMode = window ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
     const [currentTheme, setTheme] = useState(isSystemDarkMode ? 'dark' : 'light');
 
     const handleClick = () => {
@@ -29,6 +29,9 @@ export default function ThemeSwitch() {
     };
 
     useEffect(() => {
+        if (!document) {
+            return;
+        }
         const lightSwitch = document.getElementById('lightSwitch');
         const darkSwitch = document.getElementById('darkSwitch');
 
