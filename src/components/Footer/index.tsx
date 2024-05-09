@@ -3,7 +3,7 @@ import LinkButton from '../../ui/LinkButton';
 
 export default function Footer(props: FooterProps) {
     return (
-        <footer className='sticky bottom-0 left-0 right-0 z-20 bg-early-dawn-400 px-4 py-12 text-white md:px-6 dark:bg-early-dawn-800 dark:text-solarized-base0'>
+        <footer className='sticky bottom-0 left-0 right-0 z-20 bg-early-dawn-400 px-4 py-12 text-white transition-colors md:px-6 dark:bg-early-dawn-800'>
             <div className='container mx-auto'>
                 <p>
                     Feel free to reach out to me at <b>mail &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
