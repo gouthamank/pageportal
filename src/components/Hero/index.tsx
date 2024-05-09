@@ -10,9 +10,9 @@ export default function Hero(props: HeroProps) {
             </p>
             <p className='mt-4'>
                 I have professional experience with <b>React</b> and <b>Next.JS</b>, and <b>Node.JS / Express</b>{' '}
-                backends, and have helped build apps big and small, in teams and individually. I also dabble in mobile
-                development, having built and published <b>Android</b> and <b>iOS</b> apps natively and with{' '}
-                <b>React Native</b>.
+                backends, and have helped build apps big and small, in teams and individually. Additionally, I have
+                mobile development experience, having created and released Android and iOS apps using both native
+                technologies and React Native.
             </p>
         </div>
     );
