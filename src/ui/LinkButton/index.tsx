@@ -24,9 +24,29 @@ export default function LinkButton(props: LinkButtonProps) {
     if (props.iconName === 'code') {
         return (
             <a href={props.link} target='_blank' title={props.title || 'GitHub'}>
-                <span className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
+                <span
+                    className={className([
+                        'flex flex-row items-center gap-1 hover:opacity-80',
+                        {
+                            'text-solarized-cyan': !props.isFooterLink,
+                        },
+                        {
+                            'text-early-dawn-800 dark:text-early-dawn-400': props.isFooterLink,
+                        },
+                    ])}
+                >
                     <span className={className([robotoMono.className, 'text-xs'])}>GitHub</span>
-                    {codeSvg('fill-solarized-cyan transition-opacity h-4 w-4')}
+                    {codeSvg(
+                        className([
+                            'transition-opacity h-4 w-4',
+                            {
+                                'fill-solarized-cyan': !props.isFooterLink,
+                            },
+                            {
+                                'fill-early-dawn-800 dark:fill-early-dawn-400': props.isFooterLink,
+                            },
+                        ]),
+                    )}
                 </span>
             </a>
         );
@@ -34,9 +54,30 @@ export default function LinkButton(props: LinkButtonProps) {
     if (props.iconName === 'website') {
         return (
             <a href={props.link} target='_blank' title={props.title || 'Website'}>
-                <span className='flex flex-row items-center gap-1 text-solarized-cyan hover:opacity-80'>
+                <span
+                    className={className([
+                        'flex flex-row items-center gap-1 hover:opacity-80',
+                        {
+                            'text-solarized-cyan': !props.isFooterLink,
+                        },
+                        {
+                            'text-early-dawn-800 dark:text-early-dawn-400': props.isFooterLink,
+                        },
+                    ])}
+                >
+                    {' '}
                     <span className={className([robotoMono.className, 'text-xs'])}>{props.title || 'Website'}</span>
-                    {webSvg('fill-solarized-cyan transition-opacity h-4 w-4')}
+                    {webSvg(
+                        className([
+                            'transition-opacity h-4 w-4',
+                            {
+                                'fill-solarized-cyan': !props.isFooterLink,
+                            },
+                            {
+                                'fill-early-dawn-800 dark:fill-early-dawn-400': props.isFooterLink,
+                            },
+                        ]),
+                    )}
                 </span>
             </a>
         );

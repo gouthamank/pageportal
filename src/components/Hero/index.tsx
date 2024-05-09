@@ -14,7 +14,7 @@ export default function Hero(props: HeroProps) {
         <div
             className={className([
                 chivo.className,
-                'sticky left-0 right-0 top-0 z-40 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
+                'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
                 'bg-early-dawn-400 text-white dark:bg-early-dawn-800',
             ])}
         >

@@ -8,12 +8,10 @@
     --background-end-rgb: theme('colors.solarized-base3');
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: theme('colors.solarized-d-base00');
-        --background-start-rgb: theme('colors.solarized-d-base02');
-        --background-end-rgb: theme('colors.solarized-d-base03');
-    }
+:root.dark {
+    --foreground-rgb: theme('colors.solarized-d-base00');
+    --background-start-rgb: theme('colors.solarized-d-base02');
+    --background-end-rgb: theme('colors.solarized-d-base03');
 }
 
 body {

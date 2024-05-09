@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import className from 'classnames';
 
 const lightModeSvg = (className: string) => (
@@ -13,22 +13,34 @@ const darkModeSvg = (className: string) => (
 );
 
 export default function ThemeSwitch() {
-    const isSystemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const [currentTheme, setTheme] = useState(isSystemDarkMode ? 'dark' : 'light');
+    const [currentTheme, setTheme] = useState('light');
 
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         setTheme(oldTheme => {
-            if (oldTheme === 'light') {
-                document.documentElement.classList.add('dark');
-                return 'dark';
-            } else {
-                document.documentElement.classList.remove('dark');
-                return 'light';
-            }
+            return oldTheme === 'light' ? 'dark' : 'light';
         });
-    };
+    }, []);
+
+    const handleDeviceThemeChange = useCallback((evt: MediaQueryListEvent) => {
+        setTheme(evt.matches ? 'dark' : 'light');
+    }, []);
 
     useEffect(() => {
+        const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setTheme(darkMediaQuery.matches ? 'dark' : 'light');
+
+        darkMediaQuery.addEventListener('change', handleDeviceThemeChange);
+
+        return () => {
+            darkMediaQuery.removeEventListener('change', handleDeviceThemeChange);
+        };
+    }, [handleDeviceThemeChange]);
+
+    useEffect(() => {
+        // Needed for Next.JS SSR
+        if (!document) {
+            return;
+        }
         const lightSwitch = document.getElementById('lightSwitch');
         const darkSwitch = document.getElementById('darkSwitch');
 
@@ -63,7 +75,7 @@ export default function ThemeSwitch() {
                     right: 0,
                     width: '2rem',
                     height: '2rem',
-                    transition: 'transform 300ms',
+                    transition: 'transform 300ms ease-out',
                 }}
             >
                 {lightModeSvg('fill-early-dawn-400')}
@@ -79,7 +91,7 @@ export default function ThemeSwitch() {
                     right: 0,
                     width: '2rem',
                     height: '2rem',
-                    transition: 'transform 300ms',
+                    transition: 'transform 300ms ease-out',
                 }}
             >
                 {darkModeSvg('fill-early-dawn-800')}

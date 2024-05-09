@@ -19,7 +19,7 @@ const grabbd: ProjectProps = {
 
 const tamm: ProjectProps = {
     title: 'TAMM',
-    tags: ['TypeScript', 'React', 'Node.JS', 'Express', 'MariaDB', 'Redis'],
+    tags: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express', 'MariaDB', 'Redis'],
     links: [
         {
             iconName: 'website',
@@ -43,7 +43,7 @@ const tamm: ProjectProps = {
 
 const tammWorkbench: ProjectProps = {
     title: 'TAMM - Workbench',
-    tags: ['TypeScript', 'React', 'Node.JS', 'Express', 'MongoDB', 'GraphQL'],
+    tags: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express', 'MongoDB', 'GraphQL'],
     links: [],
     description: (
         <>
@@ -85,7 +85,7 @@ const sorted: ProjectProps = {
 
 const visitSaudi: ProjectProps = {
     title: 'Visit Saudi - Map',
-    tags: ['TypeScript', 'Next.JS', 'Strapi', 'Google Maps SDK', 'Google Places API'],
+    tags: ['TypeScript', 'Next.JS', 'Redux', 'Strapi', 'Google Maps SDK', 'Google Places API'],
     links: [
         {
             iconName: 'website',
