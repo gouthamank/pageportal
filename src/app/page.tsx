@@ -4,10 +4,12 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import SelectedProjects from '@/components/SelectedProjects';
 import Footer from '@/components/Footer';
+import { initialiseFirebase } from '@/utils/firebase';
 import { useEffect } from 'react';
 
 export default function Home() {
     useEffect(() => {
+        initialiseFirebase();
         window.scrollTo({
             top: 0,
             behavior: 'smooth',

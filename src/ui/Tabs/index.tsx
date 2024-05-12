@@ -3,6 +3,7 @@ import { Roboto_Mono } from 'next/font/google';
 import className from 'classnames';
 
 import type { TabsProps } from '@/types/ui/Tabs/index.types';
+import { fireTabClickEvent } from '@/utils/firebase';
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] });
 
@@ -14,6 +15,7 @@ export default function Tabs(props: TabsProps) {
             return;
         }
 
+        fireTabClickEvent(tab);
         props.onChangeTab(tab);
         setSelectedTab(tab);
     };

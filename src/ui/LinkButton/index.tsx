@@ -2,6 +2,7 @@ import { Roboto_Mono } from 'next/font/google';
 
 import type { LinkButtonProps } from '@/types/ui/LinkButton/index.types';
 import className from 'classnames';
+import { fireLinkClickEvent } from '@/utils/firebase';
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] });
 const webSvg = (className: string) => (
@@ -23,7 +24,13 @@ const codeSvg = (className: string) => (
 export default function LinkButton(props: LinkButtonProps) {
     if (props.iconName === 'code') {
         return (
-            <a href={props.link} target='_blank' title={props.title || 'GitHub'} tabIndex={props.isFooterLink ? -1 : 0}>
+            <a
+                href={props.link}
+                target='_blank'
+                title={props.title || 'GitHub'}
+                tabIndex={props.isFooterLink ? -1 : 0}
+                onClick={() => fireLinkClickEvent(props.link)}
+            >
                 <span
                     aria-hidden='true'
                     className={className([
@@ -59,6 +66,7 @@ export default function LinkButton(props: LinkButtonProps) {
                 target='_blank'
                 title={props.title || 'Website'}
                 tabIndex={props.isFooterLink ? -1 : 0}
+                onClick={() => fireLinkClickEvent(props.link)}
             >
                 <span
                     className={className([
