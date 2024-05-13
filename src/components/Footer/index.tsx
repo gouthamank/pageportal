@@ -2,10 +2,12 @@
 
 import { Chivo } from 'next/font/google';
 import LinkButton from '@/ui/LinkButton';
+import config from '@/config';
 import { useEffect } from 'react';
 
 import type { FooterProps } from '@/types/components/Footer/index.types';
 import className from 'classnames';
+import { fireLinkClickEvent } from '@/utils/firebase';
 
 const chivo = Chivo({ subsets: ['latin'] });
 
@@ -40,10 +42,11 @@ export default function Footer(props: FooterProps) {
                 <p>
                     Feel free to reach out to me at <b>mail &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
                     <a
-                        href='https://drive.google.com/file/d/19-J9ltKpzhQYPcxozuMWoSaQASyDXs0X/view'
+                        href={config.links.resume}
                         className='text-early-dawn-800 hover:opacity-80 dark:text-early-dawn-400'
                         target='_blank'
                         tabIndex={-1}
+                        onClick={() => fireLinkClickEvent(config.links.resume)}
                     >
                         <b>résumé</b>
                     </a>
@@ -52,18 +55,8 @@ export default function Footer(props: FooterProps) {
                 <p className='mt-4'>
                     Other links:{' '}
                     <span className={'inline-flex gap-2 px-2'}>
-                        <LinkButton
-                            isFooterLink
-                            iconName={'code'}
-                            link={'https://github.com/gouthamank'}
-                            title={'GitHub'}
-                        />
-                        <LinkButton
-                            isFooterLink
-                            iconName={'website'}
-                            link={'https://www.linkedin.com/in/gouthaman-kumar-999a385b'}
-                            title={'LinkedIn'}
-                        />
+                        <LinkButton isFooterLink iconName={'code'} link={config.links.github} title={'GitHub'} />
+                        <LinkButton isFooterLink iconName={'website'} link={config.links.linkedin} title={'LinkedIn'} />
                     </span>
                 </p>
             </div>

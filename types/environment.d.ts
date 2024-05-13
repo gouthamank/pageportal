@@ -7,5 +7,8 @@ namespace NodeJS {
         NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: string;
         NEXT_PUBLIC_FIREBASE_APP_ID: string;
         NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: string;
+        NEXT_PUBLIC_LINK_RESUME: string;
+        NEXT_PUBLIC_LINK_GITHUB: string;
+        NEXT_PUBLIC_LINK_LINKEDIN: string;
     }
 }

@@ -8,6 +8,11 @@ const config = {
         appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
         measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
     },
+    links: {
+        resume: process.env.NEXT_PUBLIC_LINK_RESUME,
+        github: process.env.NEXT_PUBLIC_LINK_GITHUB,
+        linkedin: process.env.NEXT_PUBLIC_LINK_LINKEDIN,
+    },
 };
 
 export default config;
