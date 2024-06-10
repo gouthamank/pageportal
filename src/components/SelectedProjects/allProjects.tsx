@@ -103,7 +103,7 @@ const visitSaudi: ProjectProps = {
 
 const respite: ProjectProps = {
     title: 'Respite',
-    tags: ['Kotlin', 'Android'],
+    tags: ['Java', 'Android'],
     links: [
         {
             iconName: 'code',
