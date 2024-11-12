@@ -32,6 +32,8 @@ const tamm: ProjectProps = {
                 Public-facing government service portal built with a microservice-oriented backend. Developed and
                 refined 30+ critical digital government services for use by UAE nationals and residents. This was a very
                 large scale project which involved onboarding APIs from around 40 different government entities.
+                Additionally, contributed heavily to the design library, maintaining and implementing new components for
+                use by web teams.
             </p>
             <p className='mt-1'>
                 These services include authentication, payment gateway integration, draft support, analytics and tight
