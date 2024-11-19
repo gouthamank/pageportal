@@ -50,12 +50,12 @@ export default function ThemeSwitch() {
 
         if (currentTheme === 'light') {
             document.documentElement.classList.remove('dark');
-            lightSwitch.style.transform = 'translateY(2rem)';
-            darkSwitch.style.transform = 'translateY(0)';
-        } else {
-            document.documentElement.classList.add('dark');
             lightSwitch.style.transform = 'translateY(0)';
             darkSwitch.style.transform = 'translateY(-2rem)';
+        } else {
+            document.documentElement.classList.add('dark');
+            lightSwitch.style.transform = 'translateY(2rem)';
+            darkSwitch.style.transform = 'translateY(0)';
         }
     }, [currentTheme]);
 
@@ -80,7 +80,7 @@ export default function ThemeSwitch() {
                     transition: 'transform 300ms ease-out',
                 }}
             >
-                {lightModeSvg('fill-early-dawn-400')}
+                {lightModeSvg('fill-early-dawn-800')}
             </div>
             <div
                 id='darkSwitch'
@@ -96,7 +96,7 @@ export default function ThemeSwitch() {
                     transition: 'transform 300ms ease-out',
                 }}
             >
-                {darkModeSvg('fill-early-dawn-800')}
+                {darkModeSvg('fill-early-dawn-400')}
             </div>
         </button>
     );

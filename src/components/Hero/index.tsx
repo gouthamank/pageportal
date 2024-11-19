@@ -4,7 +4,7 @@ import { Chivo } from 'next/font/google';
 import type { HeroProps } from '@/types/components/Hero/index.types';
 import className from 'classnames';
 import Image from 'next/image';
-import profileImage from '@/images/profile.jpg';
+import profileImage from '@/images/profile2.jpg';
 import ThemeSwitch from '@/components/ThemeSwitch';
 
 const chivo = Chivo({ subsets: ['latin'] });
