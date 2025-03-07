@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import { Gentium_Book_Plus } from 'next/font/google';
 import './globals.css';
-
-const gentiumBookPlus = Gentium_Book_Plus({ subsets: ['latin'], weight: ['400', '700'] });
+import { serifFont } from '@/utils/fonts';
 
 export const metadata: Metadata = {
     title: 'Gouthaman Kumarappan',
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={gentiumBookPlus.className}>{children}</body>
+            <body className={serifFont.className}>{children}</body>
         </html>
     );
 }

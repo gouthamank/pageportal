@@ -1,10 +1,8 @@
 import className from 'classnames';
-import { Chivo } from 'next/font/google';
 import type { ProjectProps } from '@/types/components/Project/index.types';
-import LinkButton from '../../ui/LinkButton';
-import TagContainer from '../../ui/Tag';
-
-const arvo = Chivo({ subsets: ['latin'], weight: '400' });
+import LinkButton from '@/ui/LinkButton';
+import TagContainer from '@/ui/Tag';
+import { titleFont } from '@/utils/fonts';
 
 export default function Project(props: ProjectProps) {
     return (
@@ -13,13 +11,14 @@ export default function Project(props: ProjectProps) {
             className={className([
                 'flex flex-row',
                 'rounded-lg border shadow-lg transition-all duration-200',
-                'border-gray-400 bg-solarized-base3',
-                'dark:border-gray-900 dark:bg-solarized-d-base03',
+                'border-gray-400 bg-light-bg-2',
+                'dark:border-gray-900 dark:bg-dark-bg-2',
+                'hover:scale-[1.02]',
             ])}
         >
             <div className='w-full p-4'>
                 <div className='flex flex-row items-center justify-between'>
-                    <div className={arvo.className} aria-label={'Project Title'}>
+                    <div className={titleFont.className} aria-label={'Project Title'}>
                         {props.title}
                     </div>
                     <div className='flex flex-row items-center gap-2'>

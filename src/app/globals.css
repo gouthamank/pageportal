@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: theme('colors.solarized-base0');
-    --background-start-rgb: theme('colors.solarized-base2');
-    --background-end-rgb: theme('colors.solarized-base3');
+    --foreground-rgb: theme('colors.light-fg');
+    --background-start-rgb: theme('colors.light-bg-1');
+    --background-end-rgb: theme('colors.light-bg-2');
 }
 
 :root.dark {
-    --foreground-rgb: theme('colors.solarized-d-base00');
-    --background-start-rgb: theme('colors.solarized-d-base02');
-    --background-end-rgb: theme('colors.solarized-d-base03');
+    --foreground-rgb: theme('colors.dark-fg');
+    --background-start-rgb: theme('colors.dark-bg-1');
+    --background-end-rgb: theme('colors.dark-bg-2');
 }
 
 body {

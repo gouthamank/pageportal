@@ -1,22 +1,20 @@
 'use client';
 
-import { Chivo } from 'next/font/google';
 import type { HeroProps } from '@/types/components/Hero/index.types';
 import className from 'classnames';
 import Image from 'next/image';
 import profileImage from '@/images/profile2.jpg';
 import ThemeSwitch from '@/components/ThemeSwitch';
-
-const chivo = Chivo({ subsets: ['latin'] });
+import { titleFont } from '@/utils/fonts';
 
 export default function Hero(props: HeroProps) {
     return (
         <section
             aria-label='Hero Section'
             className={className([
-                chivo.className,
+                titleFont.className,
                 'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
-                'bg-early-dawn-400 text-white dark:bg-early-dawn-800',
+                'bg-early-dawn-400 text-white dark:bg-dark-bg-2',
             ])}
         >
             <div className='flex w-full flex-row justify-end'>
