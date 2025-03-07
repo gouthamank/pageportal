@@ -21,8 +21,13 @@ export default function Hero(props: HeroProps) {
                 <ThemeSwitch />
             </div>
             <div>
-                <h3>Hi, I&apos;m</h3>
-                <h1 className='text-xl'>Gouthaman Kumarappan.</h1>
+                <h3 className={'select-none'}>Hi, I&apos;m</h3>
+                <h1 className='text-xl'>
+                    Gouthaman Kumarappan
+                    <span className={'select-none text-early-dawn-800 transition-colors dark:text-early-dawn-400'}>
+                        .
+                    </span>
+                </h1>
             </div>
             <div className='relative mt-4 h-[10rem] w-[10rem] overflow-clip rounded-[100%] border-2 border-slate-800 transition-all hover:border-0 dark:border-slate-300'>
                 <Image
@@ -31,7 +36,7 @@ export default function Hero(props: HeroProps) {
                     alt={'Gouthaman'}
                     fill
                     objectFit={'cover'}
-                    className='profile-zoom-on-hover'
+                    className='profile-zoom-on-hover select-none'
                 />
             </div>
         </section>

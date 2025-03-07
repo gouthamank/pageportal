@@ -54,7 +54,7 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
                 <SectionTitle title={'Selected Projects'} />
                 <Tabs tabs={['Web', 'Mobile']} onChangeTab={handleTabChange} />
             </div>
-            <p className='mb-4'>Here are some of the interesting projects I&apos;ve worked on over the years.</p>
+            <p className='mb-4'>Here are some interesting projects I&apos;ve worked on over the years.</p>
             {projectSelection === 'Web' && (
                 <div className='project mt-4 flex flex-col gap-5'>
                     {webProjects.map((project: ProjectProps, idx: number) => (

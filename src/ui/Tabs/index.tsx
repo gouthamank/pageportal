@@ -31,7 +31,8 @@ export default function Tabs(props: TabsProps) {
                             'bg-early-dawn-700 text-white dark:bg-early-dawn-400': selectedTab === tab,
                         },
                         {
-                            'hover:bg-early-dawn-600 dark:hover:bg-early-dawn-500': selectedTab !== tab,
+                            'hover:bg-early-dawn-600 dark:bg-dark-bg-2 dark:text-dark-fg dark:hover:bg-dark-bg-1':
+                                selectedTab !== tab,
                         },
                         {
                             'rounded-l-[15px]': idx === 0,

@@ -3,14 +3,29 @@ import type { ProjectProps } from '@/types/components/Project/index.types';
 import LinkButton from '@/ui/LinkButton';
 import TagContainer from '@/ui/Tag';
 import { titleFont } from '@/utils/fonts';
+import { motion } from 'motion/react';
 
 export default function Project(props: ProjectProps) {
     return (
-        <article
+        <motion.article
+            initial={{
+                opacity: 0,
+                translateY: 100,
+            }}
+            whileInView={{
+                opacity: 1,
+                translateY: 0,
+            }}
+            viewport={{
+                margin: '-20px',
+            }}
+            transition={{
+                ease: 'linear',
+            }}
             aria-label={props.title}
             className={className([
                 'flex flex-row',
-                'rounded-lg border shadow-lg transition-all duration-200',
+                'rounded-lg border shadow-lg',
                 'border-gray-400 bg-light-bg-2',
                 'dark:border-gray-900 dark:bg-dark-bg-2',
                 'hover:scale-[1.02]',
@@ -32,6 +47,6 @@ export default function Project(props: ProjectProps) {
                 </div>
                 <div className='mt-2 text-sm leading-snug'>{props.description}</div>
             </div>
-        </article>
+        </motion.article>
     );
 }

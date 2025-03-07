@@ -3,6 +3,7 @@
 import LinkButton from '@/ui/LinkButton';
 import config from '@/config';
 import { useEffect } from 'react';
+import { motion } from 'motion/react';
 
 import type { FooterProps } from '@/types/components/Footer/index.types';
 import className from 'classnames';
@@ -28,13 +29,24 @@ export default function Footer(props: FooterProps) {
         };
     }, []);
     return (
-        <footer
+        <motion.footer
             aria-label={'Footer Section'}
             id='footer'
             className={className([
                 titleFont.className,
                 'sticky bottom-0 left-0 right-0 z-10 bg-early-dawn-400 py-12 text-sm text-white transition-colors md:px-6 dark:bg-dark-bg-2',
             ])}
+            initial={{
+                opacity: 0,
+                translateY: 100,
+            }}
+            whileInView={{
+                opacity: 1,
+                translateY: 0,
+            }}
+            transition={{
+                ease: 'linear',
+            }}
         >
             <div className='container mx-auto px-4 md:px-6'>
                 <p>
@@ -58,6 +70,6 @@ export default function Footer(props: FooterProps) {
                     </span>
                 </p>
             </div>
-        </footer>
+        </motion.footer>
     );
 }
