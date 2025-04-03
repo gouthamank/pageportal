@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { serifFont } from '@/utils/fonts';
 import { MotionConfig } from 'motion/react';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
     title: 'Gouthaman Kumarappan',
@@ -42,6 +43,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
+            <Head>
+                <meta name='theme-color' content='#fdf6e3' media='(prefers-color-scheme: light)' />
+                <meta name='theme-color' content='#2e2e44' media='(prefers-color-scheme: dark)' />
+            </Head>
             <body className={serifFont.className}>
                 <MotionConfig reducedMotion='user'>{children}</MotionConfig>
             </body>
