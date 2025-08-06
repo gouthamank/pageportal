@@ -50,7 +50,7 @@ export default function Footer(props: FooterProps) {
         >
             <div className='container mx-auto px-4 md:px-6'>
                 <p>
-                    Feel free to reach out to me at <b>mail &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
+                    Feel free to reach out to me at <b>hello &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
                     <a
                         href={config.links.resume}
                         className='text-early-dawn-800 hover:opacity-80 dark:text-early-dawn-400'

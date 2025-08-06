@@ -1,5 +1,49 @@
 import type { ProjectProps } from '@/types/components/Project/index.types';
 
+const secretAppWeb: ProjectProps = {
+    title: 'SecretApp',
+    tags: ['TypeScript', 'Next.JS', 'Laravel', 'Motion', 'Tailwind', 'Stripe'],
+    links: [
+        {
+            iconName: 'website',
+            link: 'https://secretapp.com',
+        },
+    ],
+    description: (
+        <>
+            <p>
+                Event management platform, complete with an admin dashboard to set up and configure events and tickets,
+                and a customer / booking agent interface to view events and purchase tickets. UI Library built with
+                Storybook for consistency across web and mobile.
+            </p>
+            <p>
+                Core features include timestamped QR code scanning, OTP login, role-based API access, time-limited
+                reservations and double booking prevention.
+            </p>
+        </>
+    ),
+};
+
+const secretAppMobile: ProjectProps = {
+    title: 'SecretApp',
+    tags: ['React Native', 'Android', 'iOS', 'Nativewind', 'Stripe'],
+    links: [
+        {
+            iconName: 'website',
+            link: 'https://secretapp.com',
+        },
+    ],
+    description: (
+        <>
+            <p>
+                Customer-facing app to view events and purchase tickets. UI Library built with Storybook for consistency
+                across web and mobile. Core features include timestamped QR code scanning, OTP login, role-based API
+                access, time-limited reservations and double booking prevention.
+            </p>
+        </>
+    ),
+};
+
 const grabbd: ProjectProps = {
     title: 'Grabbd',
     tags: ['TypeScript', 'Next.JS', 'Strapi', 'GSAP', 'Lottie'],
@@ -146,8 +190,8 @@ const aecb: ProjectProps = {
     ),
 };
 
-const webProjects = [grabbd, tamm, tammWorkbench, visitSaudi, sorted];
-const mobileProjects = [aecb, respite, irascible];
+const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, visitSaudi, sorted];
+const mobileProjects = [secretAppMobile, aecb, respite, irascible];
 const allProjects = [...webProjects, ...mobileProjects];
 
 export { webProjects, mobileProjects };
