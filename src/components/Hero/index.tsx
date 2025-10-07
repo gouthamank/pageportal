@@ -6,16 +6,25 @@ import Image from 'next/image';
 import profileImage from '@/images/profile2.jpg';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import { titleFont } from '@/utils/fonts';
+import { motion, useScroll, useTransform } from 'motion/react';
 
 export default function Hero(props: HeroProps) {
+    const { scrollYProgress } = useScroll();
+    const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 1], [1, 0, 0]);
+    const heroTranslate = useTransform(scrollYProgress, [0, 0.2, 1], [0, -100, -100]);
+
     return (
-        <section
+        <motion.section
             aria-label='Hero Section'
             className={className([
                 titleFont.className,
                 'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
                 'bg-early-dawn-400 text-white dark:bg-dark-bg-2',
             ])}
+            style={{
+                opacity: heroOpacity,
+                translateY: heroTranslate,
+            }}
         >
             <div className='flex w-full flex-row justify-end'>
                 <ThemeSwitch />
@@ -39,6 +48,6 @@ export default function Hero(props: HeroProps) {
                     className='profile-zoom-on-hover select-none'
                 />
             </div>
-        </section>
+        </motion.section>
     );
 }
