@@ -4,13 +4,13 @@
 
 :root {
     --foreground-rgb: theme('colors.light-fg');
-    --background-start-rgb: theme('colors.light-bg-1');
+    --background-start-rgb: theme('colors.early-dawn.400');
     --background-end-rgb: theme('colors.light-bg-2');
 }
 
 :root.dark {
     --foreground-rgb: theme('colors.dark-fg');
-    --background-start-rgb: theme('colors.dark-bg-1');
+    --background-start-rgb: theme('colors.dark-bg-2');
     --background-end-rgb: theme('colors.dark-bg-2');
 }
 
