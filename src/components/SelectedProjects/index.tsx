@@ -3,7 +3,7 @@
 import className from 'classnames';
 import Project from '@/components/Project';
 import Tabs from '@/ui/Tabs';
-import { mobileProjects, webProjects } from './allProjects';
+import { mobileProjects, webProjects } from '@/allProjects';
 
 import type { SelectedProjectsProps } from '@/types/components/SelectedProjects/index.types';
 import { ProjectProps } from '@/types/components/Project/index.types';

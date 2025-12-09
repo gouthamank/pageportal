@@ -190,7 +190,7 @@ const aecb: ProjectProps = {
     ),
 };
 
-const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, visitSaudi, sorted];
+const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, visitSaudi];
 const mobileProjects = [secretAppMobile, aecb, respite, irascible];
 const allProjects = [...webProjects, ...mobileProjects];
 
