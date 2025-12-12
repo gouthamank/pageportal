@@ -44,8 +44,7 @@ export default function Hero(props: HeroProps) {
                     src={profileImage}
                     alt={'Gouthaman'}
                     fill
-                    objectFit={'cover'}
-                    className='profile-zoom-on-hover select-none'
+                    className='profile-zoom-on-hover select-none object-cover'
                 />
             </div>
         </motion.section>
