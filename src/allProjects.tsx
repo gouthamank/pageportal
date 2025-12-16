@@ -4,10 +4,10 @@ const secretAppWeb: ProjectProps = {
     title: 'SecretApp',
     tags: ['TypeScript', 'Next.JS', 'Laravel', 'Motion', 'Tailwind', 'Stripe'],
     links: [
-        {
-            iconName: 'website',
-            link: 'https://secretapp.com',
-        },
+        // {
+        //     iconName: 'website',
+        //     link: 'https://secretapp.com',
+        // },
     ],
     description: (
         <>
@@ -28,10 +28,10 @@ const secretAppMobile: ProjectProps = {
     title: 'SecretApp',
     tags: ['React Native', 'Android', 'iOS', 'Nativewind', 'Stripe'],
     links: [
-        {
-            iconName: 'website',
-            link: 'https://secretapp.com',
-        },
+        // {
+        //     iconName: 'website',
+        //     link: 'https://secretapp.com',
+        // },
     ],
     description: (
         <>
