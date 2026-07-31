@@ -190,8 +190,32 @@ const aecb: ProjectProps = {
     ),
 };
 
+const regimen: ProjectProps = {
+    title: 'Regimen',
+    tags: ['Jetpack Compose', 'Hilt', 'Material 3 Expressive', 'Kotlin', 'Android'],
+    links: [
+        {
+            iconName: 'code',
+            link: 'https://github.com/gouthamank/Regimen',
+        },
+        {
+            iconName: 'website',
+            link: 'https://regimen.gouthaman.dev',
+        },
+    ],
+    description: (
+        <span>
+            An Android gym-tracking app built with Kotlin, Jetpack Compose, and Material 3 Expressive. Users design
+            workout routines as templates, then log actual sessions (sets/reps/weight, cardio) against them. It&apos;s
+            local-first (Room, fully usable, offline/signed-out) with optional opt-in cloud backup and multi-device sync
+            via Firebase, plus a foreground-service-backed Active Workout flow that survives process death. Architected
+            multi-module with a full MVVM + use-case domain layer and Hilt DI.
+        </span>
+    ),
+};
+
 const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, visitSaudi];
-const mobileProjects = [secretAppMobile, aecb, respite, irascible];
+const mobileProjects = [regimen, secretAppMobile, aecb, respite, irascible];
 const allProjects = [...webProjects, ...mobileProjects];
 
 export { webProjects, mobileProjects };
