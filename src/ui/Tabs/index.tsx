@@ -27,7 +27,7 @@ export default function Tabs(props: TabsProps) {
                     aria-label={`View ${tab} projects`}
                     aria-selected={tab === selectedTab}
                     className={className([
-                        'relative flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-colors duration-200 hover:text-white',
+                        'relative isolate flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-colors duration-200 hover:text-white',
                         {
                             'text-white': selectedTab === tab,
                         },
