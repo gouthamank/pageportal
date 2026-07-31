@@ -7,11 +7,17 @@ import className from 'classnames';
 
 const categories: { label: string; tags: string[] }[] = [
     { label: 'Languages', tags: ['TypeScript', 'Java', 'Kotlin'] },
-    { label: 'Frontend', tags: ['React', 'Next.JS', 'Redux', 'Tailwind', 'Nativewind', 'Motion', 'GSAP', 'Lottie'] },
+    {
+        label: 'Frontend',
+        tags: ['React', 'Next.JS', 'Redux', 'Tailwind', 'Nativewind', 'Motion', 'GSAP', 'Lottie', 'Vite'],
+    },
     { label: 'Backend', tags: ['Node.JS', 'Express', 'GraphQL', 'Laravel'] },
     { label: 'Mobile', tags: ['React Native', 'Android', 'iOS', 'Jetpack Compose', 'Hilt', 'Material 3 Expressive'] },
     { label: 'Data', tags: ['MariaDB', 'Redis', 'MongoDB'] },
-    { label: 'Tools & APIs', tags: ['Strapi', 'Stripe', 'Google Maps SDK', 'Google Places API'] },
+    {
+        label: 'Tools & APIs',
+        tags: ['Strapi', 'Stripe', 'Google Maps SDK', 'Google Places API', 'WebRTC', 'WebSockets'],
+    },
 ];
 
 const usedTags = new Set(allProjects.flatMap(project => project.tags));

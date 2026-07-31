@@ -214,7 +214,29 @@ const regimen: ProjectProps = {
     ),
 };
 
-const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, visitSaudi];
+const petal: ProjectProps = {
+    title: 'Petal',
+    tags: ['TypeScript', 'Express', 'Tailwind', 'WebRTC', 'WebSockets', 'Vite'],
+    links: [
+        {
+            iconName: 'website',
+            link: 'https://petal.gouthaman.dev',
+        },
+        {
+            iconName: 'code',
+            link: 'https://github.com/gouthamank/petal',
+            title: 'GitHub',
+        },
+    ],
+    description: (
+        <span>
+            A Discord-inspired chat application I built to practically learn how real-time communication apps are built.
+            No login required, hop right in! Features text, audio and video chat.
+        </span>
+    ),
+};
+
+const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, petal];
 const mobileProjects = [regimen, secretAppMobile, aecb, respite, irascible];
 const allProjects = [...webProjects, ...mobileProjects];
 
