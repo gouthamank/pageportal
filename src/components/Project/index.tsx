@@ -21,6 +21,7 @@ export default function Project(props: ProjectProps) {
             }}
             transition={{
                 ease: 'linear',
+                delay: (props.index ?? 0) * 0.06,
             }}
             aria-label={props.title}
             className={className([

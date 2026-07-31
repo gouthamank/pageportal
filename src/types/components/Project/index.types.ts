@@ -3,6 +3,7 @@ export type ProjectProps = {
     tags: string[];
     links: ProjectLink[];
     description: any;
+    index?: number;
 };
 
 export type ProjectLink = {

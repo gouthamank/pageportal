@@ -32,6 +32,11 @@ export default function Footer(props: FooterProps) {
     const { scrollYProgress } = useScroll();
     const footerOpacity = useTransform(scrollYProgress, [0, 0.7, 0.9, 0.95, 1], [0.4, 0.4, 0.4, 1, 1]);
 
+    const handleEmailClick = () => {
+        const address = ['hello', 'gouthaman.dev'].join('@');
+        window.location.href = `mailto:${address}`;
+    };
+
     return (
         <motion.footer
             aria-label={'Footer Section'}
@@ -54,26 +59,35 @@ export default function Footer(props: FooterProps) {
             }}
         >
             <div className='container mx-auto px-4 md:px-6'>
-                <p>
-                    Feel free to reach out to me at <b>hello &lt;at&gt; gouthaman &lt;dot&gt; dev</b> or check out my{' '}
+                <h2
+                    className={className([
+                        titleFont.className,
+                        'text-md uppercase text-early-dawn-800 dark:text-early-dawn-400',
+                    ])}
+                >
+                    Let&apos;s Connect
+                </h2>
+                <p className='mt-3'>Have a project in mind or just want to say hi? Reach out any time.</p>
+                <div className='mt-4 flex flex-row flex-wrap items-center gap-3'>
+                    <button
+                        onClick={handleEmailClick}
+                        className='rounded-full border border-early-dawn-800 px-4 py-1.5 text-xs transition-opacity hover:opacity-80 dark:border-early-dawn-400'
+                    >
+                        Email me
+                    </button>
                     <a
                         href={config.links.resume}
-                        className='text-early-dawn-800 hover:opacity-80 dark:text-early-dawn-400'
+                        className='rounded-full border border-early-dawn-800 px-4 py-1.5 text-xs transition-opacity hover:opacity-80 dark:border-early-dawn-400'
                         target='_blank'
-                        tabIndex={-1}
                         onClick={() => fireLinkClickEvent(config.links.resume)}
                     >
-                        <b>résumé</b>
+                        Résumé
                     </a>
-                    .
-                </p>
-                <p className='mt-4'>
-                    Other links:{' '}
                     <span className={'inline-flex gap-2 px-2'}>
                         <LinkButton isFooterLink iconName={'code'} link={config.links.github} title={'GitHub'} />
                         <LinkButton isFooterLink iconName={'website'} link={config.links.linkedin} title={'LinkedIn'} />
                     </span>
-                </p>
+                </div>
             </div>
         </motion.footer>
     );

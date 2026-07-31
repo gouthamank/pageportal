@@ -2,6 +2,8 @@
 
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
+import Skills from '@/components/Skills';
 import SelectedProjects from '@/components/SelectedProjects';
 import Footer from '@/components/Footer';
 import { initialiseFirebase } from '@/utils/firebase';
@@ -27,7 +29,9 @@ export default function Home() {
                 <div className='container mx-auto flex min-h-screen flex-col px-4 md:px-6'>
                     <About />
                     <hr className='mt-12' />
+                    <Experience />
                     <SelectedProjects />
+                    <Skills />
                 </div>
             </div>
             <Footer />

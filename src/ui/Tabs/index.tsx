@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import className from 'classnames';
+import { motion } from 'motion/react';
 
 import type { TabsProps } from '@/types/ui/Tabs/index.types';
 import { fireTabClickEvent } from '@/utils/firebase';
@@ -26,9 +27,9 @@ export default function Tabs(props: TabsProps) {
                     aria-label={`View ${tab} projects`}
                     aria-selected={tab === selectedTab}
                     className={className([
-                        'flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-all duration-200 hover:text-white',
+                        'relative flex-1 cursor-pointer select-none overflow-clip px-4 py-1.5 transition-colors duration-200 hover:text-white',
                         {
-                            'bg-early-dawn-700 text-white dark:bg-early-dawn-400': selectedTab === tab,
+                            'text-white': selectedTab === tab,
                         },
                         {
                             'hover:bg-early-dawn-600 dark:bg-dark-bg-2 dark:text-dark-fg dark:hover:bg-dark-bg-1':
@@ -45,6 +46,13 @@ export default function Tabs(props: TabsProps) {
                     key={idx}
                     onClick={onTabSelected(tab)}
                 >
+                    {selectedTab === tab && (
+                        <motion.span
+                            layoutId='tab-pill'
+                            className='absolute inset-0 -z-10 bg-early-dawn-700 dark:bg-early-dawn-400'
+                            transition={{ type: 'spring', duration: 0.4, bounce: 0.2 }}
+                        />
+                    )}
                     {tab}
                 </button>
             ))}

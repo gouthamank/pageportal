@@ -58,14 +58,14 @@ export default function SelectedProjects(props: SelectedProjectsProps) {
             {projectSelection === 'Web' && (
                 <div className='project mt-4 flex flex-col gap-5'>
                     {webProjects.map((project: ProjectProps, idx: number) => (
-                        <Project key={idx} {...project} />
+                        <Project key={idx} {...project} index={idx} />
                     ))}
                 </div>
             )}
             {projectSelection === 'Mobile' && (
                 <div className='project mt-4 flex flex-col gap-5'>
                     {mobileProjects.map((project: ProjectProps, idx: number) => (
-                        <Project key={idx} {...project} />
+                        <Project key={idx} {...project} index={idx} />
                     ))}
                 </div>
             )}

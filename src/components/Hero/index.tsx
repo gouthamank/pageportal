@@ -18,7 +18,7 @@ export default function Hero(props: HeroProps) {
             aria-label='Hero Section'
             className={className([
                 titleFont.className,
-                'sticky left-0 right-0 top-0 z-20 flex min-h-[20rem] flex-col items-center justify-center px-4 pb-6 pt-3 transition-colors md:px-6',
+                'sticky left-0 right-0 top-0 z-20 flex min-h-[22rem] flex-col items-center justify-center overflow-clip px-4 pb-6 pt-3 transition-colors md:px-6',
                 'bg-early-dawn-400 text-white dark:bg-dark-bg-2',
             ])}
             style={{
@@ -26,17 +26,25 @@ export default function Hero(props: HeroProps) {
                 translateY: heroTranslate,
             }}
         >
-            <div className='flex w-full flex-row justify-end'>
+            <div
+                aria-hidden='true'
+                className='pointer-events-none absolute inset-0 opacity-40 dark:opacity-30'
+                style={{
+                    background: 'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 60%)',
+                }}
+            />
+            <div className='relative flex w-full flex-row justify-end'>
                 <ThemeSwitch />
             </div>
-            <div>
-                <h3 className={'select-none'}>Hi, I&apos;m</h3>
-                <h1 className='text-xl'>
+            <div className='relative text-center'>
+                <h3 className={'select-none text-sm opacity-90'}>Hi, I&apos;m</h3>
+                <h1 className='text-3xl md:text-4xl'>
                     Gouthaman Kumarappan
                     <span className={'select-none text-early-dawn-800 transition-colors dark:text-early-dawn-400'}>
                         .
                     </span>
                 </h1>
+                <p className='mt-2 select-none text-sm tracking-wide opacity-90 md:text-base'>Full Stack Developer</p>
             </div>
             <div className='relative mt-4 h-[10rem] w-[10rem] overflow-clip rounded-[100%] border-2 border-slate-800 transition-all hover:border-0 dark:border-slate-300'>
                 <Image
