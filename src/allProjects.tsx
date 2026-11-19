@@ -236,9 +236,33 @@ const petal: ProjectProps = {
     ),
 };
 
-const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, petal];
-const mobileProjects = [regimen, secretAppMobile, aecb, respite, irascible];
-const allProjects = [...webProjects, ...mobileProjects];
+const beat: ProjectProps = {
+    title: 'Beat',
+    tags: ['Swift', 'SwiftUI', 'macOS', 'iOS', 'iPadOS'],
+    links: [
+        {
+            iconName: 'code',
+            link: 'https://github.com/gouthamank/Beat',
+        },
+        {
+            iconName: 'website',
+            link: 'https://beat.gouthaman.dev',
+        },
+    ],
+    description: (
+        <span>
+            A local music player for Mac, iPhone and iPad, built for browsing a library the way the Music app
+            doesn&apos;t allow, like a record label&apos;s full discography. Users build their own pages of smart
+            filters that filter, sort and limit albums, songs, artists or genres, each shown as a shelf, grid, list,
+            Cover Flow or timeline. Includes gapless playback, synced lyrics, Last.fm scrobbling and Liquid Glass on
+            macOS and iOS 26, while keeping the user&apos;s library read-only and making no network requests by default.
+        </span>
+    ),
+};
 
-export { webProjects, mobileProjects };
+const webProjects = [secretAppWeb, grabbd, tamm, tammWorkbench, petal];
+const appProjects = [beat, regimen, secretAppMobile, aecb, respite, irascible];
+const allProjects = [...webProjects, ...appProjects];
+
+export { webProjects, appProjects };
 export default allProjects;

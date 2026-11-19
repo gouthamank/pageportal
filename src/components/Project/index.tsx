@@ -29,7 +29,7 @@ export default function Project(props: ProjectProps) {
                 'rounded-lg border shadow-lg',
                 'border-gray-400 bg-light-bg-2',
                 'dark:border-gray-900 dark:bg-dark-bg-2',
-                'hover:scale-[1.02]',
+                'transition-[scale] duration-200 ease-out hover:scale-[1.02]',
             ])}
         >
             <div className='w-full p-4'>
