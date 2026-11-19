@@ -7,7 +7,7 @@ export function Tag(props: TagProps) {
     return (
         <span
             className={className(monoFont.className, [
-                'rounded-md border px-1.5 py-0.5 text-[0.6rem] text-solarized-orange shadow-sm dark:text-early-dawn-400',
+                'rounded-md border px-1.5 py-0.5 text-[0.6rem] text-solarized-orange shadow-xs dark:text-early-dawn-400',
                 'md:px-2 md:py-1',
                 'border-gray-400',
                 'dark:border-gray-600',
@@ -20,7 +20,7 @@ export function Tag(props: TagProps) {
 
 export default function TagContainer(props: TagContainerProps) {
     return (
-        <div className='mb-2 mt-1 flex flex-row flex-wrap gap-1.5'>
+        <div className='mt-1 mb-2 flex flex-row flex-wrap gap-1.5'>
             {props.tags.map((tag: string, idx: number) => {
                 return <Tag key={idx}>{tag}</Tag>;
             })}

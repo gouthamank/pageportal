@@ -1,17 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+
+    --color-light-fg: #475151;
+    --color-light-bg-1: #eee8d5;
+    --color-light-bg-2: #fdf6e3;
+    --color-dark-fg: #cdd6f4;
+    --color-dark-bg-1: #1e1e2e;
+    --color-dark-bg-2: #2e2e44;
+    --color-solarized-orange: #cb4b16;
+    --color-solarized-cyan: #2aa198;
+    --color-early-dawn-50: #fdf6e3;
+    --color-early-dawn-100: #faeecb;
+    --color-early-dawn-200: #f5da92;
+    --color-early-dawn-300: #f0c359;
+    --color-early-dawn-400: #edac32;
+    --color-early-dawn-500: #e58c1b;
+    --color-early-dawn-600: #cb6914;
+    --color-early-dawn-700: #a94b14;
+    --color-early-dawn-800: #893a17;
+    --color-early-dawn-900: #713116;
+    --color-early-dawn-950: #411707;
+
+    --text-*: initial;
+    --text-xs: 0.7rem;
+    --text-sm: 0.85rem;
+    --text-base: 1rem;
+    --text-md: 1.25rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.4rem;
+    --text-2xl: 1.563rem;
+    --text-3xl: 1.953rem;
+    --text-4xl: 2.441rem;
+    --text-5xl: 3.052rem;
+}
+
+@layer base {
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+}
 
 :root {
-    --foreground-rgb: theme('colors.light-fg');
-    --background-start-rgb: theme('colors.early-dawn.400');
-    --background-end-rgb: theme('colors.light-bg-2');
+    --foreground-rgb: var(--color-light-fg);
+    --background-start-rgb: var(--color-early-dawn-400);
+    --background-end-rgb: var(--color-light-bg-2);
 }
 
 :root.dark {
-    --foreground-rgb: theme('colors.dark-fg');
-    --background-start-rgb: theme('colors.dark-bg-2');
-    --background-end-rgb: theme('colors.dark-bg-2');
+    --foreground-rgb: var(--color-dark-fg);
+    --background-start-rgb: var(--color-dark-bg-2);
+    --background-end-rgb: var(--color-dark-bg-2);
 }
 
 body {
@@ -41,14 +87,14 @@ body {
     font-size: 18px;
 }
 
-@media screen and (min-width: theme('screens.md')) {
+@media screen and (min-width: 768px) {
     html,
     body {
         font-size: 20px;
     }
 }
 
-@media screen and (min-width: theme('screens.lg')) {
+@media screen and (min-width: 1024px) {
     html,
     body {
         font-size: 24px;
